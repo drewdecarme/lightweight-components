@@ -5,6 +5,8 @@
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "types": "lib/types.d.ts",
+  "type": "module",
+  "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -21,6 +23,10 @@
       "require": "./theme/index.css"
     }
   },
+  "files": [
+    "lib/**",
+    "theme/**"
+  ],
   "scripts": {
     "theme:build": "sass src/theme/index.scss theme/index.css",
     "dev": "parcel watch",

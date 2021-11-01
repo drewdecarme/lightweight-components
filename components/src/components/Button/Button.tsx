@@ -7,20 +7,20 @@ export type ButtonProps = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  variant?: "primary" | "secondary" | "text";
+  cxVariant?: "primary" | "secondary" | "text";
 };
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(
-    { variant = "primary", className, children, ...restProps },
+    { cxVariant = "primary", className, children, ...restProps },
     ref
   ) {
     return (
       <button
         ref={ref}
         className={clsx(className, {
-          [ButtonStyle.primary]: variant === "primary",
-          [ButtonStyle.secondary]: variant === "secondary"
+          [ButtonStyle.primary]: cxVariant === "primary",
+          [ButtonStyle.secondary]: cxVariant === "secondary"
         })}
         {...restProps}
       >

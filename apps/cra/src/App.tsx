@@ -4,7 +4,7 @@ import "@lc/components/theme/index.css";
 import { Button } from "@lc/components";
 
 function App() {
-  return <Button>test</Button>;
+  return <Button cxVariant="secondary">test</Button>;
 }
 
 export default App;

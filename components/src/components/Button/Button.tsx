@@ -1,28 +1,26 @@
 import clsx from "clsx";
 import React from "react";
 
-import * as ButtonStyle from "./Button.modules.scss";
+import * as ButtonStyle from "./Button.scss";
 
 export type ButtonProps = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  variant?: "primary" | "secondary" | "text";
+  cxVariant?: "primary" | "secondary" | "text";
 };
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(
-    { variant = "primary", className, children, ...restProps },
+    { cxVariant = "primary", className, children, ...restProps },
     ref
   ) {
     return (
       <button
         ref={ref}
         className={clsx(className, {
-          // @ts-ignore
-          [ButtonStyle.primary]: variant === "primary",
-          // @ts-ignore
-          [ButtonStyle.secondary]: variant === "secondary"
+          [ButtonStyle.primary]: cxVariant === "primary",
+          [ButtonStyle.secondary]: cxVariant === "secondary"
         })}
         {...restProps}
       >

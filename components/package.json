@@ -2,15 +2,23 @@
   "name": "@lc/components",
   "version": "1.0.0",
   "source": "src/components/index.ts",
-  "main": "dist/lib/index.cjs",
-  "module": "dist/lib/index.mjs",
-  "types": "dist/lib/types.d.ts",
+  "main": "lib/index.cjs",
+  "module": "lib/index.mjs",
+  "types": "lib/types.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/lib/index.mjs",
-      "require": "./dist/lib/index.cjs",
-      "types": "./dist/lib/index.d.ts"
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
+    },
+    "./styles": {
+      "import": "./lib/index.css",
+      "require": "./lib/index.css"
+    },
+    "./theme": {
+      "import": "./theme/index.css",
+      "require": "./theme/index.css"
     }
   },
   "scripts": {

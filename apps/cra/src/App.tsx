@@ -1,6 +1,5 @@
+import "@lc/components/lib/index.css";
 import "@lc/components/theme/index.css";
-
-import "./App.css";
 
 import { Button } from "@lc/components";
 

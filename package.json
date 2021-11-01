@@ -5,16 +5,17 @@
   "private": "true",
   "workspaces": {
     "packages": [
-      "packages/**"
+      "apps/**",
+      "components"
     ]
   },
   "scripts": {
     "components:dev": "yarn workspace @lc/components dev",
     "components:build": "yarn workspace @lc/components build",
-    "app-next:dev": "yarn workspace @lc/app-next dev",
-    "app-next:build": "yarn workspace @lc/app-next build",
-    "app-cra:dev": "yarn workspace @lc/app-cra dev",
-    "app-cra:build": "yarn workspace @lc/app-cra build"
+    "next:dev": "yarn workspace @lc/app-next dev",
+    "next:build": "yarn workspace @lc/app-next build",
+    "cra:dev": "yarn workspace @lc/app-cra dev",
+    "cra:build": "yarn workspace @lc/app-cra build"
   },
   "repository": {
     "type": "git",
